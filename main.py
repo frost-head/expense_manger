@@ -1,4 +1,5 @@
 # imports
+from crypt import methods
 from flask import Flask, render_template
 import os
 from flask_mysqldb import MySQL
@@ -22,5 +23,9 @@ app.secret_key = os.urandom(24)
 @app.route("/")
 def Home():
     return render_template('Home.html')
+
+@app.route("/login",methods=["GET","POST"])
+def Login():
+    return render_template("Login.html")
 
 app.run(debug=True, host="0.0.0.0")

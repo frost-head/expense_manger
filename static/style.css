@@ -50,7 +50,7 @@ h4{
 }
 
 h5{
-    font-size: 1.1rem;
+    font-size: 1.4rem;
     opacity: 0.8;
     line-height: 1.4em;
 
@@ -112,4 +112,47 @@ nav{
     align-content: center;
     width: 10vw;
     min-width: max-content;
+}
+
+
+/* Login Page */
+
+.loginForm{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: fit-content;
+    text-align: left;
+    align-content: space-between;
+    background-color: #1b1c29;
+    padding: 50px;
+    border: #FBFEF9 5px, solid;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+}
+
+input{
+    padding: 5px 5px;
+    font-size: 1.1em;
+    border-radius: 5px;
+    border: 0px solid;
+    width: 20vw;
+}
+
+.formInput{
+    margin: 15px 0px;
+
+
+}
+
+.formButton{
+    font-size: 1.3em;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 0px solid;  
 }
