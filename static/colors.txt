@@ -1,0 +1,5 @@
+green = #6DFF8C
+primary-background = #222434
+secondary-background = #1b1c29
+red = #FF4D4D
+text = #FBFEF9
