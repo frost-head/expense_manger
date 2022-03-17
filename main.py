@@ -28,4 +28,8 @@ def Home():
 def Login():
     return render_template("Login.html")
 
+@app.route("/register",methods=["GET","POST"])
+def Register():
+    return render_template("Register.html")
+
 app.run(debug=True, host="0.0.0.0")
