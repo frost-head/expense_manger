@@ -70,9 +70,13 @@ nav h1{
 }
 
 .navlink{
-    font-size: 1.4rem;
     margin: 0px 10px;
+}
+
+.button{
+    font-size: 1.4rem;
     width: 5vw;
+    min-width: fit-content;
     transition: 0.2s;
     border-radius: 5px;
     text-align: center;
@@ -81,7 +85,7 @@ nav h1{
     padding-bottom: 5px; 
 }
 
-.navlink:hover{
+.button:hover{
 
     background-color: #FBFEF9;
     border-radius: 5px;
