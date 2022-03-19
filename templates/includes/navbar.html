@@ -3,10 +3,16 @@
     <h1 class="navtitle">
         <a href="/">Expense Manager</a>
     </h1>
-
+    {% if 'user' not in session%}
     <div class="navlinks">
-        <a href="/login" class="navlink button">login</a>
-        <a href="/register" class="navlink button">register</a>
+        <a href="/login" class="navlink button">Login</a>
+        <a href="/register" class="navlink button">Register</a>
     </div>
+    {% else %}
+    <div class="navlinks">
+        <a href="/dashboard" class="navlink button">Dashboard</a>
+        <a href="/logout" class="navlink button">Logout</a>
+    </div>
+    {% endif %}
 
 </nav>

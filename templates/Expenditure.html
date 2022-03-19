@@ -1,0 +1,47 @@
+{% extends 'Base.html' %}
+
+{% block head %}{% endblock %}
+
+{% block body %}
+
+
+<div class="loginForm">
+    <h2>Expenditure</h2>
+    <form method="post">
+
+        <div class="formInput">
+            <h5>Expenditure Title</h5>
+            <input type="text" name="title" >
+        </div>
+        <div class="formInput">
+            <h5>Amount</h5>
+            <input type="number" name="amount" >
+        </div>
+        <div class="formInput">
+            <h5>Category</h5>
+            <input list="cat" name="cat">
+            <datalist id="cat">
+                <option value="Edge">
+                <option value="Firefox">
+                <option value="Chrome">
+                <option value="Opera">
+                <option value="Safari">
+            </datalist>
+        </div>
+        <div class="formInput">
+            <h5>Asset or Libility</h5>
+            <input list="a_l" name="a_l">
+            <datalist id="a_l">
+                <option value="Asset">
+                <option value="Libility">
+            </datalist>
+        </div>
+        
+        
+        <button class="formButton" type="submit">Add</button>
+
+    </form>
+</div>
+
+
+{% endblock %}

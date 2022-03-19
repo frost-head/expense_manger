@@ -1,0 +1,31 @@
+{% extends 'Base.html' %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+<div class="Dashboard">
+    <div class="dashheader">
+        <h1>
+            Hey, {{data['name']}}
+        </h1>
+        <div class="dashlinks">
+        <div class="addorremovecard">
+            <h5>
+                <a href="/addincome" class="profit">
+                    Add an Income
+                </a>
+            </h5>
+        </div>
+        <div class="addorremovecard">
+            <h5>
+                <a href="/addexpenditure" class="loss">
+                    Add an Expenditure
+                </a>
+            </h5>
+        </div>
+    </div>
+    </div>
+</div>
+{% endblock %}

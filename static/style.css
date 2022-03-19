@@ -21,8 +21,14 @@ body{
     font-family: 'Smooch Sans', sans-serif;
 }
 
-.profit{
+.profit:hover{
+    transition: 0.5s;
     color: #6DFF8C;
+}
+
+.loss:hover{
+    transition: 0.5s;
+    color :#FF4D4D;
 }
 
 h1{
@@ -75,7 +81,7 @@ nav h1{
 
 .button{
     font-size: 1.4rem;
-    width: 5vw;
+    width: 6vw;
     min-width: fit-content;
     transition: 0.2s;
     border-radius: 5px;
@@ -159,4 +165,36 @@ input{
     padding: 5px 10px;
     border-radius: 5px;
     border: 0px solid;  
+}
+
+/* dashboard */
+
+.dashheader{
+    display: flex;
+    padding: 20px;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.addorremovecard{
+    padding: 10px;
+    margin: 5px;
+    background-color: #1b1c29;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.dashlinks{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    align-content: center;
+    width: 10vw;
+    min-width: max-content;
 }
