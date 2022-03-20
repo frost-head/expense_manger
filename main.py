@@ -79,8 +79,10 @@ def Logout():
 @app.route('/dashboard')
 def dashboard():
     if 'user' in session:
-        data = fetchone(mysql, "select name from Users where uid = {}".format(session['user']))
-        return render_template('Dashboard.html', data=data)
+        userdata = fetchone(mysql, "select name from Users where uid = {}".format(session['user']))
+        expensedata = fetchall(mysql, "select * from Expenses where uid = {}".format(session['user']))
+        incomedata = fetchall(mysql, "select * from Income where uid = {}".format(session['user']))
+        return render_template('Dashboard.html', userdata=userdata, expensedata=expensedata, incomedata=incomedata)
     else:
         return redirect('/login')
 

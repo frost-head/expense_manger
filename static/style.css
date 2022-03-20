@@ -21,12 +21,21 @@ body{
     font-family: 'Smooch Sans', sans-serif;
 }
 
-.profit:hover{
+.profit{
+    color: #6DFF8C;
+}
+
+.loss{
+    color :#FF4D4D;
+
+}
+
+.green:hover{
     transition: 0.5s;
     color: #6DFF8C;
 }
 
-.loss:hover{
+.red:hover{
     transition: 0.5s;
     color :#FF4D4D;
 }
@@ -197,4 +206,44 @@ input{
     align-content: center;
     width: 10vw;
     min-width: max-content;
+}
+
+.incomevsexpenseline{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    position: relative;
+    width: 55vw;
+    height: 60vh;
+    padding: 20px;
+    background-color: #1b1c29;
+    border-radius: 10px;
+}
+
+.savingsandcomparison
+{   display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    position: relative;
+    padding: 20px;
+    width: 30vw;
+    height: 60vh;
+    background-color: #1b1c29;
+    color: #FBFEF9;
+    border-radius: 10px;
+    justify-content: space-evenly;
+}
+
+.savingsandcomparison h2{
+    color: #6DFF8C;
+    font-size: 4em;
+}
+
+.row{
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+    flex-direction: row;
 }

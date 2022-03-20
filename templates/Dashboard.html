@@ -8,24 +8,37 @@
 <div class="Dashboard">
     <div class="dashheader">
         <h1>
-            Hey, {{data['name']}}
+            Hey, {{userdata['name']}}
         </h1>
         <div class="dashlinks">
         <div class="addorremovecard">
             <h5>
-                <a href="/addincome" class="profit">
+                <a href="/addincome" class="green">
                     Add an Income
                 </a>
             </h5>
         </div>
         <div class="addorremovecard">
             <h5>
-                <a href="/addexpenditure" class="loss">
+                <a href="/addexpenditure" class="red">
                     Add an Expenditure
                 </a>
             </h5>
         </div>
     </div>
+   
     </div>
+    <div class="row">
+    <div class="incomevsexpenseline">
+        <canvas id="incomevsexpensesline"></canvas>
+    </div>
+    <div class="savingsandcomparison">
+        
+        <canvas id="incomevsexpensesbar" ></canvas>
+        <h2 class="profit money savings" id="amountsaved">
+             +135%
+        </h2>
+    </div>
+</div>
 </div>
 {% endblock %}
