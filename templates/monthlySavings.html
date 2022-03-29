@@ -1,0 +1,71 @@
+<script>
+    function thisMonth(incomeData, expenseData) {
+        expenseData = JSON.parse(expenseData);
+        incomeData = JSON.parse(incomeData);
+
+        let totalExpenses = 0;
+        let totalIncome = 0;
+        let todaysDate = new Date();
+        for (let i in expenseData) {
+            let date = new Date(expenseData[i]['date_time'])
+
+            if (date.getMonth() == todaysDate.getMonth() && date.getYear() == todaysDate.getYear()) {
+                totalExpenses += expenseData[i]['amount']
+
+            }
+        }
+
+        console.log(incomeData)
+        for (let i in incomeData) {
+            let date = new Date(incomeData[i]['date_time'])
+
+            if (date.getMonth() == todaysDate.getMonth() && date.getYear() == todaysDate.getYear()) {
+                totalIncome += incomeData[i]['amount']
+
+            }
+        }
+        let monthlySavings = (totalIncome - totalExpenses) / (totalIncome + totalExpenses) * 100
+
+
+        return [totalIncome, totalExpenses, monthlySavings]
+
+    }
+
+    let expenseIncomedata = thisMonth('{{incomedata|tojson}}', '{{expensedata|tojson}}')
+    document.getElementById("amountsaved").innerText = "Saved " + expenseIncomedata[2].toFixed(2) + "% of your income"
+    if (expenseIncomedata[2] <= 0) {
+        document.getElementById("amountsaved").style.color = "#FF4D4D"
+    } else {
+        document.getElementById("amountsaved").style.color = "#6DFF8C"
+    }
+
+
+    let ctx1 = document.getElementById("incomevsexpensesbar")
+    Chart.defaults.color = "#FBFEF9";
+    const data1 = {
+        labels: ['Income', 'Expenses'],
+        datasets: [{
+            label: "Monthly Savings",
+
+            backgroundColor: ['#6DFF8C', '#FF4D4D'],
+            borderColor: ['#6DFF8C', '#FF4D4D'],
+
+            data: [expenseIncomedata[0], expenseIncomedata[1]],
+
+        }],
+
+    }
+
+    const iveb = new Chart(
+        ctx1,
+        config = {
+            data: data1,
+            type: "bar",
+
+
+        },
+
+
+
+    );
+</script>
