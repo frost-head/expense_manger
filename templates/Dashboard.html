@@ -1,60 +1,44 @@
-{% extends 'Base.html' %} {% block head %} {% endblock %} {% block body %}
+{% extends 'Base.html' %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
 <div class="Dashboard">
     <div class="dashheader">
-        <div class="">
-            <h1>
-                Hey, {{userdata['name']}}
-            </h1>
-            <p style="opacity: 0.8;font-size: 1.5rem;">
-                Here is statical analysis of spending
-            </p>
-        </div>
+        <h1>
+            Hey, {{userdata['name']}}
+        </h1>
         <div class="dashlinks">
-            <div class="addorremovecard">
-                <h5>
-                    <a href="/addincome" class="green">
-                        Add an Income
-                    </a>
-                </h5>
-            </div>
-            <div class="addorremovecard">
-                <h5>
-                    <a href="/addexpenditure" class="red">
-                        Add an Expenditure
-                    </a>
-                </h5>
-            </div>
+        <div class="addorremovecard">
+            <h5>
+                <a href="/addincome" class="green">
+                    Add an Income
+                </a>
+            </h5>
         </div>
-
+        <div class="addorremovecard">
+            <h5>
+                <a href="/addexpenditure" class="red">
+                    Add an Expenditure
+                </a>
+            </h5>
+        </div>
     </div>
-    <hr>
-    <br>
-    <br>
+   
+    </div>
     <div class="row">
-        <div class="column canvasColumns">
-            <h2>
-                Past Week Spendings
-            </h2>
-            <div class="incomevsexpenseline">
-
-                <canvas id="incomevsexpensesline"></canvas>
-            </div>
-        </div>
-        <div class="column canvasColumns">
-            <h2>
-                This Month Stats
-            </h2>
-            <div class="savingsandcomparison">
-                <canvas id="incomevsexpensesbar"></canvas>
-                <h3 class="money " id="amountsaved">
-                    You saved +135%
-                </h3>
-
-            </div>
-        </div>
+    <div class="incomevsexpenseline">
+        <canvas id="incomevsexpensesline"></canvas>
     </div>
-
+    <div class="savingsandcomparison">
+        
+        <canvas id="incomevsexpensesbar" ></canvas>
+        <h2 class="profit money savings" id="amountsaved">
+             +135%
+        </h2>
+    </div>
 </div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js" integrity="sha512-QSkVNOCYLtj73J4hbmVoOV6KVZuMluZlioC+trLpewV8qMjsWqlIQvkn1KGX2StWvPMdWGBqim1xlC8krl1EKQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-{% include '/monthlySavings.html' %} {% endblock %}
+</div>
+{% endblock %}

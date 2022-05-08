@@ -1,4 +1,8 @@
-{% extends 'Base.html' %} {% block head %}{% endblock %} {% block body %}
+{% extends 'Base.html' %}
+
+{% block head %}{% endblock %}
+
+{% block body %}
 
 
 <div class="loginForm">
@@ -7,11 +11,11 @@
 
         <div class="formInput">
             <h5>Expenditure Title</h5>
-            <input type="text" name="title">
+            <input type="text" name="title" >
         </div>
         <div class="formInput">
             <h5>Amount</h5>
-            <input type="number" name="amount">
+            <input type="number" name="amount" >
         </div>
         <div class="formInput">
             <h5>Category</h5>
@@ -32,8 +36,8 @@
                 <option value="Libility">
             </datalist>
         </div>
-
-
+        
+        
         <button class="formButton" type="submit">Add</button>
 
     </form>
